@@ -1,0 +1,473 @@
+/* ========================================== */
+/* VARIABLES CSS (PALETA Y TIPOGRAFÍA)        */
+/* ========================================== */
+:root {
+  --color1: #1a1a1a;
+  --color2: #666666;
+  --color3: #c48f56;
+  --color4: #ffffff;
+  --color5: #f9f9f9;
+
+  --fuente1: "Work Sans", sans-serif;
+  --spacing1: 1.6;
+}
+
+/* --------------------------- */
+/* SELECTOR UNIVERSAL          */
+/* --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------- */
+/* SELECTORES DE TIPO ETIQUETA */
+/* --------------------------- */
+body {
+  font-family: var(--fuente1);
+  line-height: var(--spacing1);
+  background-color: var(--color4);
+  color: var(--color2);
+}
+
+h2,
+h3 {
+  color: var(--color1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 15px;
+}
+
+img,
+video {
+  display: block;
+}
+
+/* --------------------------- */
+/* SELECTORES DE TIPO ID       */
+/* --------------------------- */
+#header {
+  background-color: var(--color4);
+  padding: 10px 0;
+}
+
+#text,
+#elegirnos,
+#testimonio,
+#contacto {
+  background-color: var(--color4);
+  text-align: center;
+}
+
+#calidad,
+#tarifas,
+#colaboradores {
+  background-color: var(--color5);
+  text-align: center;
+}
+
+#footer {
+  background-color: var(--color1);
+  color: var(--color4);
+  text-align: center;
+  padding: 30px 0;
+}
+
+#footer p {
+  margin-bottom: 0;
+  color: var(--color4);
+}
+
+/* --------------------------- */
+/* SELECTORES DE TIPO CLASS    */
+/* --------------------------- */
+.container {
+  max-width: 70%;
+  margin: auto;
+}
+
+.padding-xl {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.padding-xs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+.video-fluid {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: auto;
+}
+
+.top-bar {
+  background-color: var(--color1);
+  color: var(--color4);
+  padding: 10px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.enlace-contacto {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.enlace-contacto:hover {
+  color: var(--color3);
+  text-decoration: underline;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 350px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.nav-menu-link {
+  display: inline-block;
+  color: var(--color1);
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link-active {
+  color: var(--color3);
+}
+
+/* --------------------------- */
+/* BOTONES Y FORMULARIOS       */
+/* --------------------------- */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color1);
+  color: var(--color4);
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color3);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 12px 10px;
+  font: inherit;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.form-control:focus {
+  border-color: var(--color3);
+}
+.form-textarea-noresize {
+  resize: none;
+}
+.form-control-submit {
+  background-color: var(--color1);
+  color: var(--color4);
+  padding: 15px 30px;
+  border: none;
+  font: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+.form-control-submit:hover {
+  background-color: var(--color3);
+}
+
+/* --------------------------- */
+/* TABLA DE TARIFAS            */
+/* --------------------------- */
+.tbl-tarifas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: var(--color4);
+}
+.tbl-tarifas th {
+  background-color: var(--color1);
+  color: var(--color4);
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.tbl-tarifas td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  vertical-align: middle;
+}
+.tbl-tarifas tfoot td {
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  color: var(--color2);
+}
+.timg {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin: 10px auto 0 auto;
+}
+
+/* --------------------------- */
+/* FLEXBOX PARA GALERÍA        */
+/* --------------------------- */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 200px; /* Evita que las imágenes colapsen */
+}
+.pagos-img {
+  width: 250px;
+  margin: 20px auto 0 auto;
+}
+
+/* --------------------------- */
+/* BANNER PÁGINAS INTERNAS     */
+/* --------------------------- */
+.page-title {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color4);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url("../assets/img/encabezado/encabesado1.jpeg");
+}
+.page-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+}
+.page-title-content {
+  position: relative;
+  z-index: 1;
+}
+.page-title-content h2 {
+  font-size: 2.5rem !important;
+  margin-bottom: 10px;
+  color: var(--color4);
+}
+
+/* ========================================== */
+/* DISEÑO RESPONSIVO (Media Queries)          */
+/* ========================================== */
+@media (max-width: 768px) {
+  /* Ajusta la barra superior (Top Bar) */
+  .top-bar .row {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Ajusta el menú de navegación */
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Hace que todas las columnas bajen una debajo de otra */
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  /* Asegura que la tabla no se desborde agregando un scroll horizontal */
+  .tbl-tarifas {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+/* =======================================================
+   BOTÓN FLOTANTE (SCROLL-UP)
+   ======================================================= */
+.btn-scroll-up {
+  position: fixed;
+  bottom: -50px; /* Oculto por defecto debajo de la pantalla */
+  right: 20px;
+  background-color: #222; /* Un gris oscuro elegante */
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn-scroll-up:hover {
+  background-color: #555;
+}
+
+/* Esta clase se la agregaremos con JavaScript cuando bajen la pantalla */
+.btn-scroll-up.mostrar {
+  bottom: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =======================================================
+   MENÚ HAMBURGUESA (ESTILOS BASE)
+   ======================================================= */
+.btn-menu {
+  display: none; /* Oculto en computadoras */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000; /* Asegúrate de que contraste con tu header */
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* =======================================================
+   DISEÑO RESPONSIVO Y MEDIA QUERIES (OBLIGATORIOS APF3)
+   ======================================================= */
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .colaboradores-galeria {
+    flex-wrap: wrap;
+  }
+  .colaboradores-galeria .col {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mostramos el botón de hamburguesa */
+  .btn-menu {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column; /* Enlaces en lista vertical */
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-menu.mostrar-menu {
+    max-height: 500px;
+  }
+
+  .nav-menu-link {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  /* Centramos la top-bar en móviles */
+  .top-bar .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* 4. Móvil pequeño (480px) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Colaboradores a 1 por fila */
+  .colaboradores-galeria .col {
+    flex: 1 1 100%;
+  }
+}
